@@ -3,7 +3,7 @@
 #include <limits>
 using namespace std;
 
-class temp{
+class User{
     string username,password,email;
     string searchname,searchpass,searchemail;
     fstream storage_file;
@@ -30,7 +30,7 @@ int main(){
     cout<<endl;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    temp obj;
+    User obj;
 
     switch(choice){
         case '1':
@@ -56,7 +56,7 @@ int main(){
     return 0;
 }
 
-void temp::signup(){
+void User::signup(){
     cout<<"/-------------------Sign-Up-------------------/"<<endl;
     cout<<"Enter your Email: ";
     getline(cin,email);
@@ -73,7 +73,7 @@ void temp::signup(){
 
 }
 
-void temp::login(){
+void User::login(){
     cout<<"/---------------------Login----------------------/"<<endl;
     cout<<"Enter the username:";
     getline(cin,searchname);
@@ -106,7 +106,7 @@ void temp::login(){
     cout<<endl<<"You don't have an account..!!  Please Sign-Up.."<<endl<<endl;
 }
 
-void temp:: forgot_password(){
+void User:: forgot_password(){
     cout<<"Enter your user name: ";
     getline(cin,searchname);
     cout<<"Enter your email address: ";
